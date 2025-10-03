@@ -16,7 +16,7 @@ const MasterLayout = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const handleDropdownClick = (event) => {
+    const handleDropdownClick = (event: React.MouseEvent<HTMLAnchorElement>) => {
       event.preventDefault();
       const clickedLink = event.currentTarget;
       const clickedDropdown = clickedLink.closest(".dropdown");
